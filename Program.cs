@@ -22,7 +22,7 @@ namespace ConsoleApp2
                 Console.Write("\t");
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    arr[i, j] = rnd.Next(0, 55);
+                    arr[i, j] = rnd.Next(0, 100);
                     Console.Write(arr[i, j] + "\t");
                 }
                 Console.WriteLine();
