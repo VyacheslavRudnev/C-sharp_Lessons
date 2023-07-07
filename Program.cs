@@ -9,6 +9,9 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("Practice/Mod02/ex01");
+            //Завдання 1
+            //Створіть додаток, який відображає кількість парних,
+            //непарних, унікальних елементів масиву.;
             Console.WriteLine();
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
@@ -23,12 +26,12 @@ namespace ConsoleApp2
             {
                 arr[i] = rnd.Next(-10, 10);
             }
-
+            Console.WriteLine($"Сформований масив на {size} елементів");
             foreach (int i in arr)
             {
                 Console.Write(i + " ");
             }
-
+            Console.WriteLine();
             int evenElem = 0;
             int oddElem = 0;
             int uniqueElem = 0;
