@@ -7,6 +7,11 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("Practice/Mod02/ex02");
+        //Завдання 2
+        //Створіть додаток, який відображає кількість значень у
+        //масиві менше заданого параметра користувачем.Наприклад,
+        //кількість значень менших, ніж 7(7 введено користувачем
+        //з клавіатури).
             Console.WriteLine();
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
@@ -29,7 +34,7 @@ namespace ConsoleApp2
                 Console.Write(i + " ");
             }
             Console.WriteLine();
-            Console.WriteLine($"Елементи масиву меньше ({key}):"); 
+            Console.WriteLine($"\nЕлементи масиву меньше ({key}):"); 
             int countElem = 0;
             foreach (var i in arr)
             {
@@ -40,8 +45,7 @@ namespace ConsoleApp2
                 }
             }
             Console.WriteLine();
-            Console.WriteLine($"Кількість елементів масиву < {key}: {countElem}");
-            Console.WriteLine();
+            Console.WriteLine($"\nКількість елементів масиву менших за ({key}): {countElem}");
             Console.ReadKey();
         }
     }
