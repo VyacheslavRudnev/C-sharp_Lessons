@@ -6,12 +6,12 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Practice/Mod02/ex02");
         //Завдання 2
         //Створіть додаток, який відображає кількість значень у
         //масиві менше заданого параметра користувачем.Наприклад,
         //кількість значень менших, ніж 7(7 введено користувачем
         //з клавіатури).
+            Console.WriteLine("Practice/Mod02/ex02");
             Console.WriteLine();
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
