@@ -24,7 +24,7 @@ namespace ConsoleApp2
             Console.OutputEncoding = Encoding.Unicode;
             int[] arrA = new int[5];
             double[,] arrB = new double[3, 4];
-            Console.WriteLine("Введіть п'ять значень для масиву arrA, розділені пробілом");
+            Console.WriteLine("Введіть п'ять значень для масиву arrA");
             for (int i = 0; i < arrA.Length; i++)
             {
                 Console.Write($"Введіть значення для {i} елементу: ");
