@@ -6,8 +6,11 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Practice/Mod02/ex04");
-            Console.WriteLine();
+//Завдання 4
+//Дано 2 масиви розмірності M і N відповідно.
+//Необхідно переписати до третього масиву загальні
+//елементи перших двох масивів без повторень.
+            Console.WriteLine("Practice/Mod02/ex04\n");
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
 
@@ -15,41 +18,71 @@ namespace ConsoleApp2
             int[] ArrN = {2, 4, 6, 8, 11, 13, 15};
             int size = 0;
             int[] ArrS = new int[size];
-            
+            Console.Write($"Початковий масив ArrM: ");
+            for (int i = 0; i < ArrM.Length; i++)
+            {
+                Console.Write(ArrM[i] + " ");
+            }
+            Console.WriteLine();
+            Console.Write($"\nПочатковий масив ArrN: ");
+            for (int i = 0; i < ArrN.Length; i++)
+            {
+                Console.Write(ArrN[i] + " ");
+            }
+            Console.WriteLine();
+            Console.Write($"\nМасив ArrS з однаковими елементами: ");
             for (int i = 0; i < ArrM.Length; i++)
             {
                 for (int j = 0; j < ArrN.Length; j++)
                 {
-                    if (ArrM[i] != ArrN[j])
+                    if (ArrM[i] == ArrN[j])
                     {
-                        int k = 0;
-                        ArrS[k] = ArrM[i];
-                        k++;
+                        size++;
+                        Array.Resize(ref ArrS, size);
+                        ArrS[size - 1] = ArrM[i];
+                        Console.Write(ArrS[size - 1] + " ");
                     }
-                  
                 }
-               
             }
-
-
+            Console.Write($"\n\nМасив ArrS з унікальними елементами:");
+            for(int i=0;i<ArrM.Length;i++)
+            {
+                bool flag = true;
+                for(int j=0;j<ArrN.Length;j++)
+                {
+                    if (ArrM[i] == ArrN[j])
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag)
+                {
+                    size++;
+                    Array.Resize(ref ArrS, size);
+                    ArrS[size - 1] = ArrM[i];
+                    Console.Write(ArrS[size - 1] + " ");
+                }
+            }
             for (int i = 0; i < ArrN.Length; i++)
             {
+                bool flag = true;
                 for (int j = 0; j < ArrM.Length; j++)
                 {
-                    if (ArrN[i] != ArrM[j])
+                    if (ArrN[i] == ArrM[j])
                     {
-                        ArrS[k] = ArrN[i];
-                        k++;
+                        flag = false;
+                        break;
                     }
                 }
+                if (flag)
+                {
+                    size++;
+                    Array.Resize(ref ArrS, size);
+                    ArrS[size - 1] = ArrN[i];
+                    Console.Write(ArrS[size - 1] + " ");
+                }
             }
-            for (k = 0; k < ArrS.Length; k++)
-            {
-                Console.Write(ArrS[k] + " ");
-            }
-
-
-
             Console.WriteLine();
             Console.ReadKey();
         }
