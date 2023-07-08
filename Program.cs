@@ -10,7 +10,6 @@ namespace ConsoleApp2
 //Користувач вводить з клавіатури речення.Додаток має
 //підрахувати кількість голосних літер у реченні.
             Console.WriteLine("Practice/Mod02/ex08\n");
-            Console.WriteLine();
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
             Console.WriteLine("Введіть речення українською мовою: ");
